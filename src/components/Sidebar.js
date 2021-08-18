@@ -20,56 +20,35 @@ function Sidebar() {
       </LogoSection>
       <ListSection>
         <ul>
-          <Link className="link" to={`/dashboard/}`}>
+          <Link className="link">
             {" "}
             {/* <img src={dashboard} alt="dash" /> */}
-            <li>Dashboard</li>
+            <li>Home</li>
           </Link>
-          <div className="link" onClick={() => setShow(!show)}>
-            {" "}
-            {/* <img src={newVer} alt="verification" /> */}
-            <li>New Verification</li>
-            <FontAwesomeIcon
-              icon={show ? faAngleDown : faAngleRight}
-              style={{ marginLeft: "20px", color: "white", fontSize: "18px" }}
-            />
-          </div>
-          <div className="options">
-            <ul className={show ? "show" : "hide"}>
-              <li>
-                <Link to="/new" className="option">
-                  Education Check
-                </Link>
-              </li>
-              <li>
-                <Link to="/transcript" className="option">
-                  Transcript
-                </Link>
-              </li>
-              <li>
-                <Link to="/new" className="option">
-                  Identity Verification
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <Link to="/history" className="link">
+
+          <Link className="link">
             {" "}
             {/* <img src={histry} alt="history" /> */}
-            <li>Verification History</li>
+            <li>Message</li>
           </Link>
           {/* <Link className="link">
             {" "}
             <img src={contact} alt="account" /> <li>My Account</li>
           </Link> */}
-          <Link to="/receipts" className="link">
+          <Link className="link">
             {" "}
             {/* <img src={receipt} alt="receipt" /> */}
-            <li>Receipts</li>
+            <li>Ranking</li>
           </Link>
           <Link className="link">
             {" "}
             {/* <img src={logout} alt="logout" /> <li>Logout</li> */}
+            <li>Challenge</li>
+          </Link>
+          <Link className="link">
+            {" "}
+            {/* <img src={logout} alt="logout" /> <li>Logout</li> */}
+            <li>Party</li>
           </Link>
         </ul>
       </ListSection>

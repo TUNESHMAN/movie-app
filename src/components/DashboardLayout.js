@@ -40,6 +40,7 @@ const Main = styled.main`
   height: calc(100% - 70px);
   bottom: 0;
   width: calc(100% - 230px);
+  overflow-y: scroll;
 
   @media (max-width: 500px) {
     width: 100%;

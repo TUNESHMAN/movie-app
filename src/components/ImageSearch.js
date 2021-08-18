@@ -1,18 +1,24 @@
 import React, { useState } from "react";
+import "./form.css";
 
 function ImageSearch({ searchText }) {
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    searchText(text);
+    // searchText(text);
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setText(e.target.value)} />
-        <button type="submit">Search</button>
-      </form>
-    </div>
+    // <div>
+    <form onSubmit={handleSubmit} className="example">
+      <input
+        placeholder="Find Something"
+        type="text"
+        onChange={(e) => searchText(e.target.value)}
+        name="search"
+      />
+      <button type="submit">Search</button>
+    </form>
+    // </div>
   );
 }
 
