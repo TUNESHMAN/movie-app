@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { useRouteMatch, Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +14,7 @@ function TopHeader({ setShow, show }) {
   return (
     <div>
       <HeadContainer className="top-header">
-        <h5>Photo App</h5>
+        <h5 className="app-name">blueCube</h5>
         <div className="right-con">
           <div
             className="nots"
@@ -73,6 +71,10 @@ const HeadContainer = styled.div`
   border-bottom: 1px solid #eaeaea;
   opacity: 1;
   height: 50px;
+  .app-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
   @media screen and (max-width: 500px) {
     display: flex;
     padding: 10px 40px 10px 40px;
@@ -252,6 +254,7 @@ const HeadContainer = styled.div`
         font-family: segoebold;
         font-size: 14px;
         margin: 0;
+        font-family: "Poppins", sans-serif;
       }
 
       &:nth-child(2) {
@@ -262,6 +265,7 @@ const HeadContainer = styled.div`
         font-weight: 500;
         font-size: 10px;
         margin: 0;
+        font-family: "Poppins", sans-serif;
       }
     }
   }

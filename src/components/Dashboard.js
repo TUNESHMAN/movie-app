@@ -10,7 +10,7 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState("");
   const filteredImage = images.filter((image) =>
-    image.alt_description.toLowerCase().includes(term)
+    image?.alt_description?.toLowerCase().includes(term)
   );
   useEffect(() => {
     axios
@@ -30,7 +30,7 @@ function Dashboard() {
       <ImageSearch searchText={(text) => setTerm(text)} />
       {!isLoading && images.length === 0 && <h1>No Images Found</h1>}
       {isLoading ? (
-        <h5>Loading...</h5>
+        <h1>Loading...</h1>
       ) : (
         <ImageContainer>
           {filteredImage.map((image) => (

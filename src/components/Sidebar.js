@@ -1,53 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-
-import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faEnvelope,
+  faTrophy,
+  faSmile,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
-  const [show, setShow] = useState(false);
-
   return (
     <Container className="hideshow">
       <LogoSection>
-        <h3>blueCube</h3>
-        {/* <img
-          src={Logo}
-          alt="crosscheck"
-          style={{ width: "150px", height: "30px", marginLeft: "-20px" }}
-        /> */}
+        <h1 className="logo">blueCube</h1>
       </LogoSection>
       <ListSection>
         <ul>
           <Link className="link">
             {" "}
+            <FontAwesomeIcon icon={faHome} />
             {/* <img src={dashboard} alt="dash" /> */}
             <li>Home</li>
           </Link>
 
           <Link className="link">
             {" "}
-            {/* <img src={histry} alt="history" /> */}
+            <FontAwesomeIcon icon={faEnvelope} />
             <li>Message</li>
           </Link>
-          {/* <Link className="link">
-            {" "}
-            <img src={contact} alt="account" /> <li>My Account</li>
-          </Link> */}
           <Link className="link">
             {" "}
-            {/* <img src={receipt} alt="receipt" /> */}
+            <FontAwesomeIcon icon={faTrophy} />
             <li>Ranking</li>
           </Link>
           <Link className="link">
             {" "}
             {/* <img src={logout} alt="logout" /> <li>Logout</li> */}
+            <FontAwesomeIcon icon={faTrophy} />
             <li>Challenge</li>
           </Link>
           <Link className="link">
             {" "}
             {/* <img src={logout} alt="logout" /> <li>Logout</li> */}
+            <FontAwesomeIcon icon={faSmile} />
             <li>Party</li>
           </Link>
         </ul>
@@ -61,19 +57,26 @@ export default Sidebar;
 const Container = styled.div`
   height: 100vh;
   width: 230px;
-  background-color: #0092e0;
+  background-color: #ffffff;
   position: fixed;
   z-index: 2;
 `;
 
 const LogoSection = styled.div`
-  background: #1e2a36;
+  // background: #1e2a36;
   width: 230px;
   height: 70px;
   border-bottom-left-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: blue;
+    font-weight: bold;
+    margin-top: 40px;
+  }
 `;
 const ListSection = styled.div`
   margin-top: 40px;
@@ -82,14 +85,19 @@ const ListSection = styled.div`
     padding-inline-start: 20px !important;
   }
   .link {
+    font-family: "Poppins", sans-serif;
+    padding-left: 20px;
+    font-size: 20px;
     padding-bottom: 50px !important;
     text-decoration: none !important;
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: gray;
     /* opacity: 0.9; */
     &:hover {
       opacity: 1;
+      color: blue;
     }
   }
   .options {
@@ -121,7 +129,15 @@ const ListSection = styled.div`
     /* font-size: 14px; */
     font: normal normal normal 14px/16px Open Sans;
     letter-spacing: 0.4px;
-    color: #ffffff;
-    padding-left: 10px;
+    color: gray;
+    // padding-left: 40px;
+    padding: 25px;
+    padding-right: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    &:hover {
+      opacity: 1;
+      color: blue;
+    }
   }
 `;

@@ -1,25 +1,40 @@
+.select-holder {
+  display: flex;
+  /* justify-content: space-around; */
+  padding: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .select-holder {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 form {
   display: flex;
   padding: 30px;
 }
 form.example input[type="text"] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid rgb(172, 172, 172);
+  border-radius: 4px;
+  /* padding: 10px; */
+  /* font-size: 17px; */
+  /* border: 1px solid grey; */
   float: left;
   width: 80%;
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
   display: flex;
   padding-left: 25px;
-  /* margin-top: 2em; */
-  /* padding: 40px */
 }
 
 form.example button {
   /* float: left; */
   width: 20%;
   padding: 10px;
-  background: #2196f3;
+  background: blue;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
@@ -28,11 +43,39 @@ form.example button {
 }
 
 form.example button:hover {
-  background: #0b7dda;
+  background: blue;
 }
 
 form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+label,
+select {
+  width: 20%;
+  padding: 10px;
+  /* display: inline-block; */
+  /* width: 100px; */
+}
+@media only screen and (max-width: 600px) {
+  select {
+    width: 85%;
+    margin-bottom: 5px;
+  }
+}
+
+label {
+  position: relative;
+  top: -1.2em;
+  left: 5px;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid rgb(172, 172, 172);
+  border-radius: 4px;
+  /* margin: 1.5em 0 0 -100px; */
 }
